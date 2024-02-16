@@ -1,15 +1,18 @@
 {
-	"name": "pizza-shop",
-	"module": "index.ts",
-	"type": "module",
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"private": true,
-	"workspaces": [
-		"packages/*"
-	]
+  "name": "pizza-shop",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/bun": "latest",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
 }
