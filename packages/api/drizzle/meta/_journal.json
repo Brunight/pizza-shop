@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1708239029832,
+      "tag": "0000_uneven_inertia",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1708239128322,
+      "tag": "0001_colorful_the_santerians",
+      "breakpoints": true
+    }
+  ]
+}
