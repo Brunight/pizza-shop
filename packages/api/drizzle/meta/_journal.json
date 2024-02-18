@@ -15,6 +15,20 @@
       "when": 1708239128322,
       "tag": "0001_colorful_the_santerians",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1708239304589,
+      "tag": "0002_cuddly_wendigo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1708239376547,
+      "tag": "0003_colorful_tag",
+      "breakpoints": true
     }
   ]
 }
