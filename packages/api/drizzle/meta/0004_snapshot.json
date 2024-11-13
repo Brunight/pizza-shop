@@ -1,10 +1,8 @@
 {
-  "id": "598f8789-0fec-4933-b651-f80b08053da9",
-  "prevId": "9823a505-7bb1-49f1-a798-f7532fedb458",
-  "version": "5",
-  "dialect": "pg",
+  "version": "7",
+  "dialect": "postgresql",
   "tables": {
-    "users": {
+    "public.users": {
       "name": "users",
       "schema": "",
       "columns": {
@@ -60,14 +58,17 @@
       "uniqueConstraints": {
         "users_email_unique": {
           "name": "users_email_unique",
-          "nullsNotDistinct": false,
           "columns": [
             "email"
-          ]
+          ],
+          "nullsNotDistinct": false
         }
-      }
+      },
+      "policies": {},
+      "isRLSEnabled": false,
+      "checkConstraints": {}
     },
-    "restaurants": {
+    "public.restaurants": {
       "name": "restaurants",
       "schema": "",
       "columns": {
@@ -115,21 +116,24 @@
         "restaurants_manager_id_users_id_fk": {
           "name": "restaurants_manager_id_users_id_fk",
           "tableFrom": "restaurants",
-          "tableTo": "users",
           "columnsFrom": [
             "manager_id"
           ],
+          "tableTo": "users",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "set null",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "set null"
         }
       },
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false,
+      "checkConstraints": {}
     },
-    "auth_links": {
+    "public.auth_links": {
       "name": "auth_links",
       "schema": "",
       "columns": {
@@ -164,42 +168,52 @@
         "auth_links_user_id_users_id_fk": {
           "name": "auth_links_user_id_users_id_fk",
           "tableFrom": "auth_links",
-          "tableTo": "users",
           "columnsFrom": [
             "user_id"
           ],
+          "tableTo": "users",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "no action"
         }
       },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "auth_links_code_unique": {
           "name": "auth_links_code_unique",
-          "nullsNotDistinct": false,
           "columns": [
             "code"
-          ]
+          ],
+          "nullsNotDistinct": false
         }
-      }
+      },
+      "policies": {},
+      "isRLSEnabled": false,
+      "checkConstraints": {}
     }
   },
   "enums": {
-    "user_role": {
+    "public.user_role": {
       "name": "user_role",
-      "values": {
-        "manager": "manager",
-        "customer": "customer"
-      }
+      "schema": "public",
+      "values": [
+        "manager",
+        "customer"
+      ]
     }
   },
   "schemas": {},
   "_meta": {
-    "columns": {},
     "schemas": {},
-    "tables": {}
-  }
+    "tables": {},
+    "columns": {}
+  },
+  "id": "598f8789-0fec-4933-b651-f80b08053da9",
+  "prevId": "9823a505-7bb1-49f1-a798-f7532fedb458",
+  "sequences": {},
+  "policies": {},
+  "views": {},
+  "roles": {}
 }
